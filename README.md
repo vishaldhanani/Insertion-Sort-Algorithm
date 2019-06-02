@@ -4,11 +4,12 @@ The wrost case time complexity of insertion sort is O(n^2).
 
 Insertion Sort pseudocode:
 
-Call insert to insert the element that starts at index 1 into the sorted subarray in index 0.
-
-Call insert to insert the element that starts at index 2 into the sorted subarray in indices 0 through 1.
-
-Call insert to insert the element that starts at index 3 into the sorted subarray in indices 0 through 2.
-…
-
-Finally, call insert to insert the element that starts at index n-1n−1 into the sorted subarray in indices 0 through n−2.
+i ← 1
+while i < length(A)
+    j ← i
+    while j > 0 and A[j-1] > A[j]
+        swap A[j] and A[j-1]
+        j ← j - 1
+    end while
+    i ← i + 1
+end while
